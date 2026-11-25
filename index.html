@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="VOLLEYGEST, sistema de gestion para escuelas de voleibol.">
+  <title>VOLLEYGEST | Gestión deportiva</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-ball">🏐</div>
+        <div class="brand-name">VOLLEY<span>GEST</span></div>
+        <small>Organización · Control · Gestión</small>
+      </div>
+
+      <nav class="main-nav" aria-label="Navegación principal">
+        <button class="nav-link active" data-page="inicio"><span>⌂</span> Inicio</button>
+        <button class="nav-link" data-page="deportistas"><span>♟</span> Deportistas</button>
+        <button class="nav-link" data-page="inscripciones"><span>▦</span> Inscripciones</button>
+        <button class="nav-link" data-page="pagos"><span>$</span> Pagos</button>
+        <button class="nav-link" data-page="entrenadores"><span>⚑</span> Entrenadores</button>
+        <button class="nav-link" data-page="reportes"><span>▥</span> Reportes</button>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="user-avatar">A</div>
+        <div><strong>Administrador</strong><small>Panel de gestión</small></div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+        <div>
+          <p class="eyebrow">ESCUELA DE VOLEIBOL</p>
+          <h1 id="pageTitle">Panel de administración</h1>
+        </div>
+        <div class="top-actions">
+          <span class="status"><i></i> Sistema en línea</span>
+          <div class="top-avatar">AD</div>
+        </div>
+      </header>
+
+      <section class="page active" id="page-inicio">
+        <div class="hero">
+          <div class="hero-copy">
+            <span class="hero-tag">GESTIÓN DEPORTIVA</span>
+            <h2>Bienvenido a <span>VOLLEYGEST</span></h2>
+            <p>La tecnología al servicio del deporte. Organiza, administra y acompaña el crecimiento de tu escuela.</p>
+            <button class="button button-gold" data-go="deportistas">Explorar módulos <b>→</b></button>
+          </div>
+          <div class="hero-ball" aria-hidden="true">🏐</div>
+          <div class="hero-decoration"></div>
+        </div>
+
+        <div class="metric-grid">
+          <article class="metric-card">
+            <div class="metric-icon blue-icon">♟</div>
+            <div><p>Deportistas</p><strong id="athleteCount">45</strong><small>Registrados en el sistema</small></div>
+          </article>
+          <article class="metric-card">
+            <div class="metric-icon green-icon">▦</div>
+            <div><p>Inscripciones</p><strong id="registrationCount">38</strong><small>Procesos registrados</small></div>
+          </article>
+          <article class="metric-card">
+            <div class="metric-icon orange-icon">$</div>
+            <div><p>Pagos registrados</p><strong id="paymentTotal">$2.850.000</strong><small>Recaudo de demostración</small></div>
+          </article>
+          <article class="metric-card">
+            <div class="metric-icon purple-icon">⚑</div>
+            <div><p>Entrenadores</p><strong id="coachCount">5</strong><small>Equipo técnico</small></div>
+          </article>
+        </div>
+
+        <div class="dashboard-grid">
+          <article class="panel">
+            <div class="panel-heading"><div><span class="panel-symbol">▥</span><h3>Resumen general</h3></div><span class="subtle">Datos de ejemplo</span></div>
+            <div class="chart">
+              <div class="chart-row"><span>Deportistas</span><div class="track"><i class="bar bar-blue" style="width:90%"></i></div><b>45</b></div>
+              <div class="chart-row"><span>Inscripciones</span><div class="track"><i class="bar bar-green" style="width:76%"></i></div><b>38</b></div>
+              <div class="chart-row"><span>Pagos al día</span><div class="track"><i class="bar bar-orange" style="width:56%"></i></div><b>28</b></div>
+              <div class="chart-row"><span>Entrenadores</span><div class="track"><i class="bar bar-purple" style="width:50%"></i></div><b>5</b></div>
+            </div>
+          </article>
+
+          <article class="panel">
+            <div class="panel-heading"><div><span class="panel-symbol">◷</span><h3>Actividad reciente</h3></div><span class="subtle">Últimos movimientos</span></div>
+            <div class="activity-list">
+              <div class="activity-item"><span class="activity-dot green-dot"></span><div><strong>Pago registrado</strong><small>Juan Pérez · Mensualidad</small></div><time>Hoy</time></div>
+              <div class="activity-item"><span class="activity-dot blue-dot"></span><div><strong>Nueva inscripción</strong><small>María López · Categoría Mini</small></div><time>Ayer</time></div>
+              <div class="activity-item"><span class="activity-dot orange-dot"></span><div><strong>Deportista registrado</strong><small>Carlos Ruiz · Juvenil</small></div><time>23 nov.</time></div>
+            </div>
+          </article>
+        </div>
+
+        <section class="quick-section">
+          <div class="section-title"><div><p class="eyebrow">ACCESO RÁPIDO</p><h3>¿Qué deseas gestionar?</h3></div></div>
+          <div class="quick-grid">
+            <button class="quick-card" data-go="deportistas"><span class="quick-icon blue-icon">♟</span><b>Deportistas</b><small>Consultar registros</small></button>
+            <button class="quick-card" data-go="inscripciones"><span class="quick-icon green-icon">▦</span><b>Inscripciones</b><small>Ver inscripciones</small></button>
+            <button class="quick-card" data-go="pagos"><span class="quick-icon orange-icon">$</span><b>Pagos</b><small>Consultar pagos</small></button>
+            <button class="quick-card" data-go="entrenadores"><span class="quick-icon purple-icon">⚑</span><b>Entrenadores</b><small>Equipo técnico</small></button>
+            <button class="quick-card" data-go="reportes"><span class="quick-icon teal-icon">▥</span><b>Reportes</b><small>Ver estadísticas</small></button>
+          </div>
+        </section>
+      </section>
+
+      <section class="page" id="page-deportistas">
+        <div class="page-intro"><div><p class="eyebrow">MÓDULO</p><h2>Deportistas</h2><p>Consulta y registra los deportistas de la escuela.</p></div><button class="button button-primary" id="addAthlete">＋ Nuevo deportista</button></div>
+        <div class="panel table-panel"><div class="table-toolbar"><h3>Listado de deportistas</h3><input class="search-input" data-search="athleteTable" placeholder="Buscar deportista..."></div>
+          <div class="table-wrap"><table id="athleteTable"><thead><tr><th>Documento</th><th>Nombre</th><th>Edad</th><th>Categoría</th><th>Estado</th></tr></thead><tbody>
+            <tr><td>1023456789</td><td>Juan Pérez</td><td>14</td><td>Infantil</td><td><span class="pill success">Activo</span></td></tr>
+            <tr><td>1002345678</td><td>María López</td><td>12</td><td>Mini</td><td><span class="pill success">Activo</span></td></tr>
+            <tr><td>1019876543</td><td>Carlos Ruiz</td><td>16</td><td>Juvenil</td><td><span class="pill success">Activo</span></td></tr>
+            <tr><td>1007654321</td><td>Sofía Martínez</td><td>10</td><td>Mini</td><td><span class="pill success">Activo</span></td></tr>
+          </tbody></table></div>
+        </div>
+      </section>
+
+      <section class="page" id="page-inscripciones">
+        <div class="page-intro"><div><p class="eyebrow">MÓDULO</p><h2>Inscripciones</h2><p>Seguimiento de los procesos de inscripción.</p></div><button class="button button-primary" id="addRegistration">＋ Nueva inscripción</button></div>
+        <div class="panel table-panel"><div class="table-toolbar"><h3>Inscripciones registradas</h3><input class="search-input" data-search="registrationTable" placeholder="Buscar inscripción..."></div>
+          <div class="table-wrap"><table id="registrationTable"><thead><tr><th>Código</th><th>Deportista</th><th>Categoría</th><th>Fecha</th><th>Estado</th></tr></thead><tbody>
+            <tr><td>INS-001</td><td>Juan Pérez</td><td>Infantil</td><td>05/11/2026</td><td><span class="pill success">Activa</span></td></tr>
+            <tr><td>INS-002</td><td>María López</td><td>Mini</td><td>08/11/2026</td><td><span class="pill success">Activa</span></td></tr>
+            <tr><td>INS-003</td><td>Carlos Ruiz</td><td>Juvenil</td><td>12/11/2026</td><td><span class="pill warning">Pendiente</span></td></tr>
+          </tbody></table></div>
+        </div>
+      </section>
+
+      <section class="page" id="page-pagos">
+        <div class="page-intro"><div><p class="eyebrow">MÓDULO</p><h2>Pagos</h2><p>Registro y consulta de pagos de los deportistas.</p></div><button class="button button-primary" id="addPayment">＋ Registrar pago</button></div>
+        <div class="panel table-panel"><div class="table-toolbar"><h3>Historial de pagos</h3><input class="search-input" data-search="paymentTable" placeholder="Buscar pago..."></div>
+          <div class="table-wrap"><table id="paymentTable"><thead><tr><th>Recibo</th><th>Deportista</th><th>Concepto</th><th>Fecha</th><th>Valor</th><th>Estado</th></tr></thead><tbody>
+            <tr><td>PAG-001</td><td>Juan Pérez</td><td>Mensualidad</td><td>05/11/2026</td><td>$120.000</td><td><span class="pill success">Pagado</span></td></tr>
+            <tr><td>PAG-002</td><td>María López</td><td>Mensualidad</td><td>08/11/2026</td><td>$120.000</td><td><span class="pill success">Pagado</span></td></tr>
+            <tr><td>PAG-003</td><td>Carlos Ruiz</td><td>Inscripción</td><td>12/11/2026</td><td>$80.000</td><td><span class="pill warning">Pendiente</span></td></tr>
+          </tbody></table></div>
+        </div>
+      </section>
+
+      <section class="page" id="page-entrenadores">
+        <div class="page-intro"><div><p class="eyebrow">MÓDULO</p><h2>Entrenadores</h2><p>Información del equipo técnico de la escuela.</p></div><button class="button button-primary" id="addCoach">＋ Nuevo entrenador</button></div>
+        <div class="panel table-panel"><div class="table-toolbar"><h3>Equipo técnico</h3><input class="search-input" data-search="coachTable" placeholder="Buscar entrenador..."></div>
+          <div class="table-wrap"><table id="coachTable"><thead><tr><th>Documento</th><th>Nombre</th><th>Especialidad</th><th>Contacto</th><th>Estado</th></tr></thead><tbody>
+            <tr><td>79876543</td><td>Andrés Gómez</td><td>Mini e infantil</td><td>300 123 4567</td><td><span class="pill success">Activo</span></td></tr>
+            <tr><td>80123456</td><td>Laura Sánchez</td><td>Juvenil</td><td>310 555 0198</td><td><span class="pill success">Activo</span></td></tr>
+            <tr><td>79987654</td><td>Diego Ramírez</td><td>Preparación física</td><td>320 444 2211</td><td><span class="pill success">Activo</span></td></tr>
+          </tbody></table></div>
+        </div>
+      </section>
+
+      <section class="page" id="page-reportes">
+        <div class="page-intro"><div><p class="eyebrow">MÓDULO</p><h2>Reportes</h2><p>Indicadores generales para apoyar la gestión administrativa.</p></div><span class="pill info">Vista demostrativa</span></div>
+        <div class="report-grid">
+          <article class="report-card"><span class="metric-icon blue-icon">♟</span><p>Total de deportistas</p><strong>45</strong><small>Registros de ejemplo</small></article>
+          <article class="report-card"><span class="metric-icon green-icon">▦</span><p>Inscripciones activas</p><strong>38</strong><small>Procesos registrados</small></article>
+          <article class="report-card"><span class="metric-icon orange-icon">$</span><p>Recaudo registrado</p><strong>$2.850.000</strong><small>Valor ilustrativo</small></article>
+          <article class="report-card"><span class="metric-icon purple-icon">⚑</span><p>Entrenadores</p><strong>5</strong><small>Equipo técnico</small></article>
+        </div>
+      </section>
+
+      <footer class="footer"><span>© 2026 VOLLEYGEST · Prototipo académico</span><span>Juntos por el voleibol <b>🏐</b></span></footer>
+    </main>
+  </div>
+
+  <dialog id="demoDialog" class="demo-dialog">
+    <form method="dialog" id="demoForm">
+      <div class="dialog-head"><div><p class="eyebrow">NUEVO REGISTRO</p><h3 id="dialogTitle">Agregar registro</h3></div><button class="close-dialog" aria-label="Cerrar">×</button></div>
+      <div id="dialogFields" class="dialog-fields"></div>
+      <p class="demo-note">Demostración: este registro solo se agrega a la tabla mientras la página esté abierta.</p>
+      <div class="dialog-actions"><button class="button button-secondary" value="cancel">Cancelar</button><button class="button button-primary" id="saveDemo" value="default">Agregar</button></div>
+    </form>
+  </dialog>
+  <div class="toast" id="toast" role="status"></div>
+
+  <script>
+    const titles = {
+      inicio: "Panel de administración", deportistas: "Gestión de deportistas",
+      inscripciones: "Gestión de inscripciones", pagos: "Gestión de pagos",
+      entrenadores: "Gestión de entrenadores", reportes: "Reportes y estadísticas"
+    };
+
+    function navigate(page) {
+      document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
+      document.getElementById("page-" + page).classList.add("active");
+      document.querySelectorAll(".nav-link").forEach(b => b.classList.toggle("active", b.dataset.page === page));
+      document.getElementById("pageTitle").textContent = titles[page];
+      document.getElementById("sidebar").classList.remove("open");
+    }
+
+    document.querySelectorAll("[data-page]").forEach(b => b.addEventListener("click", () => navigate(b.dataset.page)));
+    document.querySelectorAll("[data-go]").forEach(b => b.addEventListener("click", () => navigate(b.dataset.go)));
+    document.getElementById("menuToggle").addEventListener("click", () => document.getElementById("sidebar").classList.toggle("open"));
+
+    document.querySelectorAll("[data-search]").forEach(input => {
+      input.addEventListener("input", () => {
+        const table = document.getElementById(input.dataset.search);
+        const query = input.value.toLocaleLowerCase("es");
+        table.querySelectorAll("tbody tr").forEach(row => {
+          row.hidden = !row.textContent.toLocaleLowerCase("es").includes(query);
+        });
+      });
+    });
+
+    const dialog = document.getElementById("demoDialog");
+    const fieldsBox = document.getElementById("dialogFields");
+    let activeTable = null;
+    let activeType = "";
+
+    const forms = {
+      athlete: {title:"Nuevo deportista", table:"athleteTable", fields:[["Documento","Documento"],["Nombre completo","Nombre"],["Edad","Edad"],["Categoría","Categoría"]]},
+      registration: {title:"Nueva inscripción", table:"registrationTable", fields:[["Nombre del deportista","Deportista"],["Categoría","Categoría"]]},
+      payment: {title:"Registrar pago", table:"paymentTable", fields:[["Nombre del deportista","Deportista"],["Concepto","Concepto"],["Valor en pesos","Valor"]]},
+      coach: {title:"Nuevo entrenador", table:"coachTable", fields:[["Documento","Documento"],["Nombre completo","Nombre"],["Especialidad","Especialidad"],["Contacto","Contacto"]]}
+    };
+
+    function openDemoForm(type) {
+      const config = forms[type];
+      activeType = type;
+      activeTable = document.querySelector("#" + config.table + " tbody");
+      document.getElementById("dialogTitle").textContent = config.title;
+      fieldsBox.innerHTML = "";
+      config.fields.forEach(([label, placeholder]) => {
+        const wrapper = document.createElement("label");
+        wrapper.className = "field";
+        wrapper.innerHTML = `<span>${label}</span><input required placeholder="${placeholder}" autocomplete="off">`;
+        fieldsBox.appendChild(wrapper);
+      });
+      dialog.showModal();
+    }
+
+    document.getElementById("addAthlete").addEventListener("click", () => openDemoForm("athlete"));
+    document.getElementById("addRegistration").addEventListener("click", () => openDemoForm("registration"));
+    document.getElementById("addPayment").addEventListener("click", () => openDemoForm("payment"));
+    document.getElementById("addCoach").addEventListener("click", () => openDemoForm("coach"));
+
+    document.getElementById("demoForm").addEventListener("submit", event => {
+      if (event.submitter && event.submitter.id === "saveDemo") {
+        event.preventDefault();
+        const values = [...fieldsBox.querySelectorAll("input")].map(i => i.value.trim());
+        if (values.some(v => !v)) return;
+        const date = new Date().toLocaleDateString("es-CO");
+        let cells = [];
+        if (activeType === "athlete") cells = [values[0], values[1], values[2], values[3], '<span class="pill success">Activo</span>'];
+        if (activeType === "registration") cells = ["INS-" + String(activeTable.rows.length + 1).padStart(3,"0"), values[0], values[1], date, '<span class="pill success">Activa</span>'];
+        if (activeType === "payment") cells = ["PAG-" + String(activeTable.rows.length + 1).padStart(3,"0"), values[0], values[1], date, "$" + Number(values[2]).toLocaleString("es-CO"), '<span class="pill success">Pagado</span>'];
+        if (activeType === "coach") cells = [values[0], values[1], values[2], values[3], '<span class="pill success">Activo</span>'];
+        const row = activeTable.insertRow();
+        cells.forEach(value => {
+          const cell = row.insertCell();
+          if (String(value).startsWith("<span")) cell.innerHTML = value;
+          else cell.textContent = value;
+        });
+        dialog.close();
+        showToast("Registro agregado a la demostración.");
+      }
+    });
+
+    function showToast(message) {
+      const toast = document.getElementById("toast");
+      toast.textContent = message;
+      toast.classList.add("show");
+      setTimeout(() => toast.classList.remove("show"), 2600);
+    }
+
+    // Consulta el servidor Java para verificar que la página está conectada.
+    fetch("/api/estado").then(r => r.json()).then(data => {
+      if (data.aplicacion === "VOLLEYGEST") console.info("Servidor VOLLEYGEST conectado:", data.estado);
+    }).catch(() => console.info("Vista abierta sin servidor Java."));
+  </script>
+</body>
+</html>
